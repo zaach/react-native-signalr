@@ -7,7 +7,7 @@ if (!window.addEventListener) {
 window.navigator.userAgent = "react-native";
 window.jQuery = require('./signalr-jquery-polyfill.js');
 
-import RNEventSource from 'react-native-signalr';
+import RNEventSource from 'react-native-event-source';
 
 if (!window.EventSource) {
   window.EventSource = RNEventSource;
