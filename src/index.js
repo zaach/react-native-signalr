@@ -6,8 +6,14 @@ if (!window.addEventListener) {
 }
 window.navigator.userAgent = "react-native";
 window.jQuery = require('./signalr-jquery-polyfill.js');
-  
-module.exports = { 
+
+import RNEventSource from 'react-native-signalr';
+
+if (!window.EventSource) {
+  window.EventSource = RNEventSource;
+}
+
+module.exports = {
   setLogger: (logger) => {
     if (window.console && window.console.debug) {
       window.console.debug("OVERWRITING CONSOLE.DEBUG in react-native-signalr");

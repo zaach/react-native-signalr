@@ -10,7 +10,13 @@ window.navigator.userAgent = "react-native";
 
 //Act
 window.jQuery = require('./signalr-jquery-polyfill.js');
-window.EventSource = require('react-native-event-source');
+
+import RNEventSource from 'react-native-signalr';
+
+if (!window.EventSource) {
+  window.EventSource = RNEventSource;
+}
+
 require('ms-signalr-client');
 
 //Restore old state
