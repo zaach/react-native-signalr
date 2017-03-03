@@ -16,6 +16,6 @@
     "jquery-deferred": "^0.3.0",
     "jquery-param": "0.2.0",
     "ms-signalr-client": "^2.2.2",
-    "react-native-event-source": "1.0.0"
+    "react-native-event-source": "https://github.com/zaach/react-native-event-source.git#master"
   }
 }
