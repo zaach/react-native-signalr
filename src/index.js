@@ -32,8 +32,7 @@ module.exports = {
       require('ms-signalr-client');
       signalRHubConnectionFunc = window.jQuery.hubConnection;
     }
-    const protocol = serverUrl.split('//')[0];
-    const host = serverUrl.split('//')[1];
+    const [protocol, host] = serverUrl.split(/\/\/|\//);
     window.location = {
       protocol: protocol,
       host: host
